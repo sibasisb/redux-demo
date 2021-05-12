@@ -1,0 +1,36 @@
+.bodyWrap{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bodyWrap header{
+  height: 10%;
+  background-color: #424242;
+  width: 100%;
+}
+
+.bodyWrap section{
+  height: 80%;
+  width: 100%;
+}
+
+.bodyWrap footer{
+  height: 10%;
+  width: 100%;
+  background-color: #424242;
+  color: #f2f2f2;
+}
+
+.buttonDark {
+  background-color: #424242;
+  color: #f2f2f2;
+  text-align: center;
+  width: 15%;
+  margin: 0% 40% 0% 40%;
+}
+
+.buttonDark:hover {
+  cursor: pointer;
+}

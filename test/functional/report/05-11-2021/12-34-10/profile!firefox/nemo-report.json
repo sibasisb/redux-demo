@@ -1,0 +1,203 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-11T07:04:11.926Z",
+    "end": "2021-05-11T07:04:40.306Z",
+    "duration": 28380,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "52df73f0-da44-4dca-8354-8e53baa54337",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [
+        {
+          "title": "\"before all\" hook",
+          "fullTitle": "\"before all\" hook",
+          "timedOut": false,
+          "duration": 0,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "if (Suite.tests.length > 0) {\n  return createNemo()\n    .then(bindNemo.bind(this));\n}\nreturn;",
+          "err": {},
+          "uuid": "99cc1aa5-68e5-466c-9075-1618688522f7",
+          "parentUUID": "52df73f0-da44-4dca-8354-8e53baa54337",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "afterHooks": [
+        {
+          "title": "\"after all\" hook: destroyNemo",
+          "fullTitle": "\"after all\" hook: destroyNemo",
+          "timedOut": false,
+          "duration": 0,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "log('destroyNemo: called');\nif (this.nemo) {\n  if (this.nemo.driver) {\n    log('Quitting nemo driver instance');\n    return this.nemo.driver.quit()\n      .then(function () {\n        log('destroyNemo: Quit driver');\n        return Promise.resolve();\n      });\n  }\n  log('Nemo instance does not have a driver to quit');\n}",
+          "err": {},
+          "uuid": "b1434894-f3ee-4e68-b2d0-594acd52408f",
+          "parentUUID": "52df73f0-da44-4dca-8354-8e53baa54337",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cde39b82-bde3-4a2d-adc9-7d1b731a35af",
+          "title": "@App component testing@",
+          "fullFile": "C:\\Users\\sibas\\OneDrive\\Desktop\\react testing\\react-testing-project\\test\\functional\\nemo.test.js",
+          "file": "\\test\\functional\\nemo.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook",
+              "fullTitle": "@App component testing@ \"before all\" hook",
+              "timedOut": false,
+              "duration": 13707,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (Suite.tests.length > 0) {\n  return createNemo()\n    .then(bindNemo.bind(this));\n}\nreturn;",
+              "err": {},
+              "uuid": "a28add61-68ed-45b0-bf96-57b7dd9a7a9d",
+              "parentUUID": "cde39b82-bde3-4a2d-adc9-7d1b731a35af",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook for \"#should say Testing\"",
+              "fullTitle": "@App component testing@ \"before each\" hook for \"#should say Testing\"",
+              "timedOut": false,
+              "duration": 9439,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "await this.nemo.driver.get(this.nemo.data.baseUrl)",
+              "err": {
+                "message": "WebDriverError: Reached error page: about:neterror?e=connectionFailure&u=http%3A//localhost%3A3000/&c=UTF-8&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A3000.",
+                "estack": "WebDriverError: Reached error page: about:neterror?e=connectionFailure&u=http%3A//localhost%3A3000/&c=UTF-8&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost%3A3000.\n    at Object.throwDecodedError (node_modules\\selenium-webdriver\\lib\\error.js:514:15)\n    at parseHttpResponse (node_modules\\selenium-webdriver\\lib\\http.js:519:13)\n    at C:\\Users\\sibas\\OneDrive\\Desktop\\react testing\\react-testing-project\\node_modules\\selenium-webdriver\\lib\\http.js:441:30\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\nFrom: Task: WebDriver.navigate().to(http://localhost:3000)\n    at thenableWebDriverProxy.schedule (node_modules\\selenium-webdriver\\lib\\webdriver.js:807:17)\n    at Navigation.to (node_modules\\selenium-webdriver\\lib\\webdriver.js:1133:25)\n    at thenableWebDriverProxy.get (node_modules\\selenium-webdriver\\lib\\webdriver.js:988:28)\n    at Context.<anonymous> (test\\functional\\nemo.test.js:32:28)\n    at processImmediate (internal/timers.js:456:21)",
+                "diff": null
+              },
+              "uuid": "5116f5d2-c153-4236-98fe-7efbb8bf54f2",
+              "parentUUID": "cde39b82-bde3-4a2d-adc9-7d1b731a35af",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook: destroyNemo",
+              "fullTitle": "@App component testing@ \"after all\" hook: destroyNemo",
+              "timedOut": false,
+              "duration": 5190,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "log('destroyNemo: called');\nif (this.nemo) {\n  if (this.nemo.driver) {\n    log('Quitting nemo driver instance');\n    return this.nemo.driver.quit()\n      .then(function () {\n        log('destroyNemo: Quit driver');\n        return Promise.resolve();\n      });\n  }\n  log('Nemo instance does not have a driver to quit');\n}",
+              "err": {},
+              "uuid": "1a200e48-3980-4013-a29e-b900bce114a2",
+              "parentUUID": "cde39b82-bde3-4a2d-adc9-7d1b731a35af",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "#should say Testing",
+              "fullTitle": "@App component testing@ #should say Testing",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await this.nemo.views._find('#root h1')",
+              "err": {},
+              "uuid": "2fbac258-cb0f-4f62-a03b-377080105d19",
+              "parentUUID": "cde39b82-bde3-4a2d-adc9-7d1b731a35af",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "2fbac258-cb0f-4f62-a03b-377080105d19"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 180000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 180000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "nemo-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "quiet": true,
+        "reportDir": "C:\\Users\\sibas\\OneDrive\\Desktop\\react testing\\react-testing-project\\test\\functional\\report/05-11-2021/12-34-10/profile!firefox",
+        "reportFilename": "nemo-report",
+        "assetsDir": "C:\\Users\\sibas\\OneDrive\\Desktop\\react testing\\react-testing-project\\test\\functional\\report/mochawesomeAssets"
+      },
+      "version": "4.1.0"
+    }
+  }
+}
